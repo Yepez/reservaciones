@@ -1,0 +1,27 @@
+{% load static %}
+<html>
+  <head>
+    <title>Reservas</title>
+    <link
+      rel="stylesheet"
+      href="//maxcdn.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap.min.css"
+    />
+    <link
+      rel="stylesheet"
+      href="//maxcdn.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap-theme.min.css"
+    />
+    <link rel="stylesheet" href="{% static 'css/reservas.css' %}" />
+  </head>
+  <body>
+    <div>
+      <h1><a href="/bookings/product/">Reservas</a></h1>
+    </div>
+
+    {% for product in products %}
+    <div>
+      <h2><a href="">{{ product.description }}</a></h2>
+      <p>clave: {{ product.code }}</p>
+    </div>
+    {% endfor %}
+  </body>
+</html>
